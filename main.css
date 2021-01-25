@@ -1,0 +1,202 @@
+/* TO USE NOTO SANS:
+font-family: 'Noto Sans', sans-serif;
+
+TO USE Black Ops One:
+font-family: 'Black Ops One', cursive;
+
+TO USE Saira Extra Condensed:
+font-family: 'Saira Extra Condensed', sans-serif;
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+        /* Hiding the overflow hides the navbar */
+        overflow: hidden;
+        font-family: 'Noto Sans', sans-serif;
+}
+
+#top-nav {
+    color: rgb(250, 250, 100);
+    background: #ffdd00;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    width: 100vw;
+    height: 8vh;
+    /* space between pushes the elements to the edges */
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Saira Extra Condensed', sans-serif;
+}
+
+.welcome {
+    font-family: 'Black Ops One', cursive;
+    font-size: 42px;
+    /* Try to center it, not perfect though */
+    min-width: 55vw;
+    text-align: right;
+}
+
+#nav-toggle {
+    font-size: 24px;
+    text-decoration: none;
+    padding: 2px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.45s;
+}
+
+.nav-hidden {
+    transform: translateX(100%);
+}
+
+.rotated {
+  transform: rotate(-90deg);
+}
+
+#side-nav {
+    /* absolute positioning gives the navbar no space, it overlaps the content anyway */
+    position: absolute;
+    right: 0px;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-size: 28px;
+    /* The animation when the nav bar slides in/out */
+    transition: transform 0.6s;
+    /* How much space the navbar takes up, 18% of the window width */
+    width: 18vw;
+    height: 92vh;
+    /*background-color: #2D2D2D; */
+    background-color: #ffdd00;
+    border-radius: 2px 0 0 2px;
+    border: solid 2px #121212;
+    font-size: 20px;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    padding-top: 8vh;
+    padding-bottom: 8vh;
+}
+
+#side-nav > a {
+    color: rgb(230, 230, 100);
+    font-size: 24px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: 0.3s;
+    /* Disable dragging links */
+
+    user-select: none;
+}
+
+#side-nav > a:hover {
+    font-size: 26px;
+}
+/* When set to hidden, the nav bar is pushed off of the screen, overflow is hidden so it's not visible */
+/* I'm using transform becuase it can have an awesome slide animation */
+.nav-active {
+    transform: translateX(100%);
+}
+
+/* Applies to all the content */
+main > section {
+    padding: 4px;
+    border-radius: 2px;
+    border: solid 3px #121212;
+    background: #ffdd00;
+}
+
+/* The red titles within the sections */
+.title {
+    padding-bottom: 4px;
+    font-size: 30px;
+    color: white;
+}
+
+/* The text usually accompanying an image in the sections */
+.text {
+    color: #3299a8;
+    font-size: 20px;
+}
+
+.centre-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#index-main {
+  padding: 10px;
+    text-align: center;
+    background-image: url("bg.jpg");
+    width: 100vw;
+    height: 92vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#left {
+    grid-area: right;
+    width: 40vw;
+    height: 60vh;
+}
+
+#right {
+    grid-area: right;
+    width: 44vw;
+}
+
+/* slides are hidden, the visible slide has a slide-visible class */
+.slide {
+    display: none;
+    height: 52vh;
+}
+
+.slide-visible {
+    display: block;
+}
+
+.slide-header{
+    height: 3vh;
+    font-size: 20px;
+    margin-bottom: 1vh;
+}
+
+.slide-image {
+    width: 100%;
+    height: 97%;
+}
+
+.slide-footer {
+    height: 4vh;
+}
+
+/* About us page */
+#about-main {
+  padding: 8px;
+    text-align: center;
+    background: #416B93;
+    width: 100vw;
+    height: 92vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#middle {
+    width: 69vw;
+    height: 70vh;
+}
+
+.text-container {
+    padding-left: 15vh;
+    padding-right: 15vh;
+    text-align: left;
+}
